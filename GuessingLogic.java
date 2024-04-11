@@ -30,7 +30,8 @@ public class GuessingLogic {
 
 
     //generate randome numbers for each gamemode 0-9 digits (random number gets encrypted so user doesnt know)
-    public static int[] randomNumberGenerator(int noDigits) { //repetition is allowed
+    public static int[] randomNumberGenerator(int noDigits) { //WORKING
+        //repetition is allowed
         int[] code = new int[noDigits]; 
         int max=9, min=0;
         //generate randome numbers from 0-9
@@ -40,7 +41,7 @@ public class GuessingLogic {
         return code;
     } //--WORKING
 
-    public static char[] encryptCode(int[] Code, int maxGuess) {
+    public static char[] encryptCode(int[] Code, int maxGuess) { //WORKING
         char[] encrypted = new char[Code.length];
         for(int i = 0; i < Code.length; i++) {
             encrypted[i] = 'X';  
@@ -48,7 +49,7 @@ public class GuessingLogic {
         return encrypted;
     }
 
-    public void displayCode(int[] Code) {
+    public void displayCode(int[] Code) { //WORKING
         for (int i = 0; i < Code.length; i++) {
             System.out.print(Code[i]);
         }
@@ -56,7 +57,7 @@ public class GuessingLogic {
     }
 
     //check if right or wrong
-    public void checkGuess(int[] Code, int[]Guess) {
+    public void checkGuess(int[] Code, int[]Guess) { //WORKING
         System.out.print("Code: ");
         for(int i = 0; i < Code.length; i++) {
             for(int j = i; j < Code.length;) {
@@ -96,7 +97,7 @@ public class GuessingLogic {
             //generate random number display it in ***
             System.out.print("Your Code is: ");
             System.out.println(encryptCode(getRandomCode(), noDigits));
-            displayCode(getRandomCode());
+            //displayCode(getRandomCode());
 
             //input of player
             System.out.println("Enter Guess(X X X): ");
