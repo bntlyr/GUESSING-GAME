@@ -2,6 +2,7 @@ import java.awt.event.*;
 import java.util.Arrays;
 import java.awt.*;
 import javax.swing.*;
+import javax.swing.border.Border;
 import javax.swing.text.*;
 
 public class CodleApp implements ActionListener {
@@ -77,6 +78,7 @@ public class CodleApp implements ActionListener {
                 }
             }
         }
+        panelMain.add(gridPanel, BorderLayout.CENTER);
 
         // Footer Panel
         panelFooter.setLayout(new FlowLayout());
@@ -90,6 +92,7 @@ public class CodleApp implements ActionListener {
         gameWindow.add(panelMain, BorderLayout.CENTER);
         gameWindow.add(panelFooter, BorderLayout.SOUTH);
         panelMain.add(panelEast, BorderLayout.EAST);
+        panelMain.add(panelWest, BorderLayout.WEST);
 
         panelHeader.setBackground(Color.GRAY);
         panelMain.setBackground(Color.DARK_GRAY);
